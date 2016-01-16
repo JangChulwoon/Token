@@ -3,7 +3,7 @@ spring으로 임의 token을 구현해 보았습니다.
 
 
 	 * 사용법
-	 
+	 jwtPack 이라는 package에 JwtCreat 라는 class 를 이용합니다
 	 * 1. maven 에 다음과 같이 등록해 주세요
 	  
 	 * <dependency> 
