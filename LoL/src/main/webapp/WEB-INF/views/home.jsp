@@ -12,6 +12,7 @@
 	<input type="submit" value="ok">
 	<input type="reset" value="cancle"> 
 </form>
+${key}
 
 </body>
 </html>

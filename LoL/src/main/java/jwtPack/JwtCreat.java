@@ -22,8 +22,11 @@ public class JwtCreat {
 	 * 
 	 * 1. maven 에 다음과 같이 등록해 주세요
 	 * 
-	 * <dependency> <groupId>io.jsonwebtoken</groupId>
-	 * <artifactId>jjwt</artifactId> <version>0.6.0</version> </dependency>
+	 * <dependency> 
+	 * 		<groupId>io.jsonwebtoken</groupId>
+	 * 		<artifactId>jjwt</artifactId> 
+	 * 		<version>0.6.0</version> 
+	 * </dependency>
 	 * 
 	 * 2. 설명
 	 * 

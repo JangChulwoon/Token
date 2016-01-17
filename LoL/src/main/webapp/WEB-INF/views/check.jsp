@@ -1,12 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
 <body>
-check ¼º°øÇÏ¿´½À´Ï´Ù.
+check ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.
+
+<h2>ì¸ì¦í•˜ê¸°</h2>
+
+<form action="rune.do">
+	ì•„ì´ë””  :  <input name = "id"  type="text">
+			<input type="submit" value="ok">
+			<input type="reset" value="cancle"> 
+</form>
 </body>
 </html>
