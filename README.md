@@ -24,24 +24,24 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 	
 	+ <h4> 인증 부분 (JJWT)	</h4> 
 	
-	구현시 사용된 JwtCreat.class는 다음과 같은 함수를 갖고있습니다.
+		구현시 사용된 JwtCreat.class는 다음과 같은 함수를 갖고있습니다.
 		
 	<h5>생성자</h5> 
 	
-	객체를 생성시 request 와 response 를 인자로 받아 초기화합니다. 
+		객체를 생성시 request 와 response 를 인자로 받아 초기화합니다. 
 		
 	<h5>HttpSession id_enroll(HttpSession session, String id) </h5> 
 		
-	session와 id 값을 받아와 session에 id 와 key (jwt 에서 사용될 key) 값을 저장합니다.
-	그 후, 세션을 반환합니다.
+		session와 id 값을 받아와 session에 id 와 key (jwt 에서 사용될 key) 값을 저장합니다.
+		그 후, 세션을 반환합니다.
 	```
 		JwtCreat creat = new JwtCreat(request,response);
 		ex ) session = creat.id_enroll(session, id);
 	```
 	<h5>Cookie[] cookie_enroll(String id, Key key)</h5> 
 	
-	id와 key 값을 받아와 jwt를 이용해 token 값을 생성합니다.
-	그 후, token 값을 사용자의 cookie에 저장. 
+		id와 key 값을 받아와 jwt를 이용해 token 값을 생성합니다.
+		그 후, token 값을 사용자의 cookie에 저장. 
 	
 	Cookie를 반환합니다.
 		
@@ -51,8 +51,8 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 		
 	<h5>boolean TokenCheck(HttpSession session)</h5> 
 	 
-	session 값을 받은후 session에 저장된 id 와 key 값을
-	이용하여 결과값을 만들고 cookie 에 저장된 값과 비교하여 같을 경우 true 다를 경우 false 를 반환합니다.
+		session 값을 받은후 session에 저장된 id 와 key 값을
+		이용하여 결과값을 만들고 cookie 에 저장된 값과 비교하여 같을 경우 true 다를 경우 false 를 반환합니다.
 	
 	```
 	ex)
@@ -66,9 +66,9 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 
 
 	+ <h4> Riot api	</h4> 
-	RiotApi.class 는 다음과 같이 사용됩니다.
-	judge 함수에 String (id) 값을 넣으면 4자리 수가 생성되고 첫번째 룬페이지와 일치하면 다음페이지로 넘어가도록 
-	작성했습니다.
+		RiotApi.class 는 다음과 같이 사용됩니다.
+		judge 함수에 String (id) 값을 넣으면 4자리 수가 생성되고 첫번째 룬페이지와 일치하면 다음페이지로 넘어가도록 
+		작성했습니다.
 	
 	```
 		RiotApi api = new RiotApi();
