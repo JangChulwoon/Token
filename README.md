@@ -22,7 +22,7 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 		</dependency>
 	 ```
 	
-	<h4> 인증 부분 (JJWT)	</h4> 
+	+ <h4> 인증 부분 (JJWT)	</h4> 
 	
 	구현시 사용된 JwtCreat.class는 다음과 같은 함수를 갖고있습니다.
 		
@@ -64,6 +64,38 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 		}
 	```
 
+
+	+ <h4> Riot api	</h4> 
+	RiotApi.class 는 다음과 같이 사용됩니다.
+	judge 함수에 String (id) 값을 넣으면 4자리 수가 생성되고 첫번째 룬페이지와 일치하면 다음페이지로 넘어가도록 
+	작성했습니다.
+	
+	```
+		RiotApi api = new RiotApi();
+		long num = api.judge(id);
+		if(num==0){
+			return "fail";
+		}
+		String p_name = api.pagename(num);
+		Hidden hide = new Hidden(id);
+		model.addAttribute("run_name", hide.ch_value()); // 난수를 view로 전달
+	```
+	
+	```
+		RiotApi api = new RiotApi();
+		long num = api.judge(id);
+		String p_name = api.pagename(num);
+		Hidden hide = new Hidden(id);
+		String rune_code = Integer.toString(hide.ch_value());
+		p_name = p_name.trim();
+		rune_code = rune_code.trim();
+		if(rune_code.equals(p_name)){
+			return "success";
+		}else{
+			return "home";
+		}
+		
+	```
 
 + <h4> 버전 </h4>
 
