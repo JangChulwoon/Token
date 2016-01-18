@@ -4,9 +4,9 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
  2. Riot api를 이용하여 사용자의 id를 이용한 코드 생성 및 첫번째 룬 페이지의 이름을 가져오는 부분을 구현하였습니다. 
  (Hidden.class / RiotApi.class)
 
-	 + 사용하기전 설정
+	  <h4>사용하기전 설정</h4>
 	
-	  <h4>maven (pom.xml)(- dependencies) 에 다음과 같이 등록해 주세요</h4>
+	  maven (pom.xml)(- dependencies) 에 다음과 같이 등록해 주세요
 	  ```
 		<!-- jjwt  -->
 		<dependency>
@@ -22,7 +22,8 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 		</dependency>
 	
 	 ```
-	 + 1. Token 인증 부분 (JJWT)
+	 
+	 <h4> 1. Token 인증 부분 (JJWT)</h4> <br>
 		구현시 사용된 JwtCreat.class는 다음과 같은 함수를 갖고있습니다.
 	+생성자 
 		객체를 생성시 request 와 response 를 인자로 받아 초기화합니다. 
