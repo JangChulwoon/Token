@@ -7,7 +7,7 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 	 +사용하기전 설정
 	
 	  maven (pom.xml)(- dependencies) 에 다음과 같이 등록해 주세요
-	  ```
+	```
 		<!-- jjwt  -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -22,15 +22,15 @@ spring FrameWork를 사용하여 Jwt(Tocken 인증 을 사용해보기 위해) �
 		</dependency>
 	 ```
 	
-	 +Token 인증 부분 (JJWT) <br>
+	 Token 인증 부분 (JJWT) 
 		구현시 사용된 JwtCreat.class는 다음과 같은 함수를 갖고있습니다.
-		+생성자 
+	생성자 
 		객체를 생성시 request 와 response 를 인자로 받아 초기화합니다. 
-	+id_enroll
+	id_enroll
 		
-	+cookie_enroll
+	cookie_enroll
 	
-	+TokenCheck
+	TokenCheck
 	 
 	  id_enroll(HttpSession session, String id) 는 session 값과 id 값을 받아 key와 id 를
 	  등록한후 session을 반환합니다.
