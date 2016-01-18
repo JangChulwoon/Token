@@ -29,13 +29,13 @@ public class Hidden {
 		String hex = hexString(id);
 		int value = 0;
 		for (int i = 0; i < id.length(); i++) {
-			value += id.charAt(i);
+			value += id.charAt(i)*5;
 		}
 		while (value >= 9999) {
 			value /= 10;
 		}
 		while (value < 999) {
-			value *= 7;
+			value *= 5;
 		}
 		return value;
 	}

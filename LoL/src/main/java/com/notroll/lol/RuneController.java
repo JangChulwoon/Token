@@ -42,19 +42,22 @@ public class RuneController {
 			return "fail";
 		}
 		String p_name = api.pagename(num);
-		Hidden hide = new Hidden(p_name);
-		model.addAttribute("code", hide.ch_value());
-		session.setAttribute("idcode", num);
+		Hidden hide = new Hidden(id);
+		model.addAttribute("run_name", hide.ch_value());
+		session.setAttribute("lol_id", id);
 		return "runpage";
 	}
 	
 	@RequestMapping(value = "/runepage.do", method = RequestMethod.GET)
 	public String runepage(Locale locale, Model model,HttpServletRequest request,HttpSession session,HttpServletResponse response) {
+		String id  = (String)session.getAttribute("lol_id");
 		RiotApi api = new RiotApi();
-		System.out.println(session.getAttribute("idcode"));
-		String p_name = api.pagename((Long)session.getAttribute("idcode"));
-		Hidden hide = new Hidden(p_name);
-		String rune_code = ""+hide.ch_value();		
+		long num = api.judge(id);
+		String p_name = api.pagename(num);
+		Hidden hide = new Hidden(id);
+		String rune_code = Integer.toString(hide.ch_value());
+		p_name = p_name.trim();
+		rune_code = rune_code.trim();
 		if(rune_code.equals(p_name)){
 			return "success";
 		}else{

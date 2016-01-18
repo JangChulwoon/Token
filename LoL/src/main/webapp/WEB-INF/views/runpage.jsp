@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2> 첫번째 룬페이지 이름을  ${code } 로 바꾼후 버튼을 누르세요 </h2>
+<h2> 첫번째 룬페이지 이름을  ${run_name } 로 바꾼후 버튼을 누르세요 </h2>
 <form action="runepage.do">
 		<input type="submit" value="ok">
 </form>
